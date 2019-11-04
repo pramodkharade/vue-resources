@@ -3,7 +3,15 @@
     <div class="row">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
         <h1>Vue Resources</h1>
-
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" v-model="user.username">
+          </div>
+          <div class="form-group">
+            <label for="mail">Mail</label>
+            <input type="email" class="form-control" v-model="user.email">
+          </div>
+          <button class="btn btn-primary" @click="submitFrm">submit</button>
       </div>
     </div>
     </div>
@@ -14,7 +22,15 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      user:{
+        username:'',
+        email:''
+      }
+    }
+  },
+  methods:{
+    submitFrm(){
+
     }
   }
 }
