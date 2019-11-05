@@ -38,7 +38,7 @@ export default {
   },
   methods:{
     submitFrm(){
-      this.$http.post('baseurl/data.json', this.user)
+      this.$http.post('', this.user)
                  .then((res)=>{
                    console.log('res::',res);
                  },error=>{
@@ -46,7 +46,7 @@ export default {
                  });
     },
     fetchData(){
-      this.$http.get('baseurl/data.json')
+      this.$http.get('')
                 .then((res)=>{
                     return res.json();
                 },error=>{
